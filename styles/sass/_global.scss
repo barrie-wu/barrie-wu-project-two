@@ -1,0 +1,80 @@
+* {
+    border: .5px solid red;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $baseFont;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 85%;
+}
+
+h1, h2, h3, h4,
+button, .readMoreButton {
+    text-transform: uppercase;
+}
+
+h2, h3, h4,
+button, .readMoreButton {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 6.9rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 4.5rem;
+    line-height: 99.8px;
+}
+
+h3 {
+    font-size: 4rem;
+    line-height: 58px;
+    letter-spacing: 1.3px;
+}
+
+h4 {
+    font-size: 2.5rem;
+    line-height: 58px;
+    letter-spacing: 0.8px;
+}
+
+button, .readMoreButton {
+    font-size: 2.24rem;
+    line-height: 41.6px;
+    text-align: center;
+}
+
+p, a {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 1px;
+}
+
+article p span:first-child {
+    font-weight: 700;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
