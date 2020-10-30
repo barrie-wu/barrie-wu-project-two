@@ -1,0 +1,7 @@
+section:nth-child(odd) {
+    background-color: $pine;
+}
+
+section:nth-child(even), aside {
+    background-color: $almostBlack;
+}
