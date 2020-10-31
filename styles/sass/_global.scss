@@ -1,12 +1,40 @@
+// DEBUGGING-DEVTOOL
 // * {
 //     border: .5px solid red;
 // }
 
+// REMOVE DEFAULT STYLING
 * {
     padding: 0;
     margin: 0;
 }
 
+figure {
+    margin: 0;
+}
+
+section {
+    padding: 100px 0;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+}
+
+// WRAPPER SETTINGS
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 85%;
+}
+
+// BASE TYPOGRAPHY SETTINGS
 html {
     font-size: 62.5%;
 }
@@ -14,12 +42,6 @@ html {
 body {
     font-family: $baseFont;
     color: $white;
-}
-
-.wrapper {
-    max-width: 1280px;
-    margin: 0 auto;
-    width: 85%;
 }
 
 h1, h2, h3, h4,
@@ -54,12 +76,6 @@ h4 {
     letter-spacing: 0.8px;
 }
 
-button, .readMoreButton {
-    font-size: 2.24rem;
-    line-height: 41.6px;
-    text-align: center;
-}
-
 p, a {
     font-size: 2rem;
     font-weight: 400;
@@ -71,16 +87,17 @@ article p span:first-child {
     font-weight: 700;
 }
 
-ul {
-    list-style: none;
-    display: flex;
+// BUTTON STYLING
+button, .readMoreButton {
+    font-size: 2.24rem;
+    line-height: 41.6px;
+    text-align: center;
 }
 
-a {
-    text-decoration: none;
-    color: $white;
+article a {
+    padding: 10px 5px 5px;
+    background-color: $yellow;
 }
 
-figure {
-    margin: 0;
-}
+
+

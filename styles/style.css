@@ -240,12 +240,23 @@ html {
   margin: 0;
 }
 
-html {
-  font-size: 62.5%;
+figure {
+  margin: 0;
 }
 
-body {
-  font-family: "Josefin Sans", sans-serif;
+section {
+  padding: 100px 0;
+}
+
+ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
   color: #ffffff;
 }
 
@@ -253,6 +264,15 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   width: 85%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
 }
 
 h1, h2, h3, h4,
@@ -287,12 +307,6 @@ h4 {
   letter-spacing: 0.8px;
 }
 
-button, .readMoreButton {
-  font-size: 2.24rem;
-  line-height: 41.6px;
-  text-align: center;
-}
-
 p, a {
   font-size: 2rem;
   font-weight: 400;
@@ -304,20 +318,15 @@ article p span:first-child {
   font-weight: 700;
 }
 
-ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+button, .readMoreButton {
+  font-size: 2.24rem;
+  line-height: 41.6px;
+  text-align: center;
 }
 
-a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-figure {
-  margin: 0;
+article a {
+  padding: 10px 5px 5px;
+  background-color: #ffd300;
 }
 
 header nav li {
@@ -375,7 +384,7 @@ header {
   background-repeat: no-repeat;
   background-position: cover;
   width: 100%;
-  height: 85vh;
+  height: 74vh;
   background-position-x: -100px;
 }
 
@@ -384,7 +393,7 @@ header {
   background-repeat: no-repeat;
   background-position: cover;
   width: 100%;
-  height: 85vh;
+  height: 73vh;
   background-position-x: -150px;
 }
 
@@ -394,6 +403,57 @@ section:nth-child(odd) {
 
 section:nth-child(even), aside {
   background-color: #171b0e;
+}
+
+.aboutUs ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.aboutUs ul li {
+  margin-top: 12%;
+  width: 45%;
+  position: relative;
+  z-index: 1;
+}
+
+.aboutUs ul li a:first-child {
+  font-size: 3rem;
+  color: #171b0e;
+}
+
+.aboutUs ul li a:first-child::after {
+  content: '';
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  background-color: #ffd300;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: -6px;
+  z-index: -1;
+}
+
+.aboutUs ul li:nth-child(3), .aboutUs ul li:nth-child(4) {
+  margin-top: 50px;
+}
+
+.features ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.features ul li article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 footer {

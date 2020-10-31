@@ -1,0 +1,42 @@
+.aboutUs ul {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+        margin-top: 12%;
+        width: 45%;
+        position: relative;
+        z-index: 1;
+        a:first-child {
+            font-size: 3rem;
+            color: $almostBlack;
+            &::after {
+                content: '';
+                height: 50px;
+                width: 50px;
+                display: inline-block;
+                background-color: $yellow;
+                border-radius: 50%;
+                position: absolute;
+                top: -10px;
+                left: -6px;
+                z-index: -1;
+            }
+        }
+        &:nth-child(3),
+        &:nth-child(4) {
+            margin-top: 50px;
+        }
+    }
+}
+
+.features {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        li article {
+            display: flex;
+        }
+    }
+}
+
+
