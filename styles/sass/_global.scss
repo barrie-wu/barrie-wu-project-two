@@ -3,6 +3,7 @@
 //     border: .5px solid red;
 // }
 
+
 // REMOVE DEFAULT STYLING
 * {
     padding: 0;
@@ -27,14 +28,32 @@ a {
     color: $white;
 }
 
+
 // WRAPPER SETTINGS
+.mainwrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
 .wrapper {
     max-width: 1280px;
     margin: 0 auto;
     width: 85%;
 }
 
-// BASE TYPOGRAPHY SETTINGS
+
+// BACKGROUND COLORS
+section:nth-child(odd) {
+    background-color: $pine;
+}
+
+section:nth-child(even), aside {
+    background-color: $almostBlack;
+}
+
+
+// BASE TYPOGRAPHY
 html {
     font-size: 62.5%;
 }
@@ -87,7 +106,8 @@ article p span:first-child {
     font-weight: 700;
 }
 
-// BUTTON STYLING
+
+// BUTTON STYLES
 button, .readMoreButton {
     font-size: 2.24rem;
     line-height: 41.6px;
@@ -95,7 +115,7 @@ button, .readMoreButton {
 }
 
 article a {
-    padding: 10px 5px 5px;
+    padding: 15px 15px 10px;
     background-color: $yellow;
 }
 

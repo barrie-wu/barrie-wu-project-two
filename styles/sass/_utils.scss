@@ -1,3 +1,4 @@
+// FONTS AND COLOURS
 $baseFont: 'Josefin Sans', sans-serif;
 
 $yellow: #ffd300; // rgb(255,211,0);
@@ -6,12 +7,14 @@ $almostBlack: #171b0e; // rgb(23,27,14);
 $pine: #2b331b; // rgb(43,51,27);
 $black: #0f0f0f; // rgb(15,15,15);
 
+// HERO IMAGE SETTINGS
 @mixin headerBackground {
     background-repeat: no-repeat;
     background-position: cover;
     width: 100%;
 }
 
+// HOVER/FOCUS/ACTIVE STATES
 @mixin hoverFocus {
     &:hover, &:focus, &:active {
         @content;

@@ -1,3 +1,15 @@
+// HOMEPAGE MAIN GLOBAL STYLES
+.homeMain article {
+    p {
+        margin-bottom: 25px;
+    }
+    .findMoreButton {
+        background-color: $black;
+        padding: 15px 20px 10px;
+    }
+}
+
+// ABOUT US STYLES
 .aboutUs ul {
     flex-wrap: wrap;
     justify-content: space-between;
@@ -29,14 +41,82 @@
     }
 }
 
+
+// FEATURES STYLES
 .features {
     ul {
         display: flex;
         flex-wrap: wrap;
         li article {
             display: flex;
+            .featureText {
+                width: 42%;
+                a {
+                    color: $almostBlack;
+                }
+            }
+        }
+    }
+}
+
+.featureArticle1 {
+    flex-direction: row-reverse;
+
+}
+
+.featureArticle2 {
+    align-items: flex-end;
+    .featureText {
+        text-align: right;
+    }
+}
+
+
+// CONTEST STYLES
+.contest {
+    text-align: center;
+    h2 {
+        color: $yellow;
+    }
+    p {
+        text-align: left;
+    }
+}
+
+
+// BANNER STYLES
+.banner {
+    padding: 0;
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+// HOME BLOG POST STYLES
+.homeBlogPost article {
+    display: flex;
+    justify-content: space-between;
+    .homeBlogPostText {
+        width: 70%;
+        h2 {
+            color: $yellow;
         }
     }
 }
 
 
+// GALLERY STYLES
+.gallery {
+    ul {
+        justify-content: space-between;
+        li {
+            width: 32%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

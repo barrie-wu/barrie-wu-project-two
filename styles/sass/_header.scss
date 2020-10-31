@@ -1,3 +1,4 @@
+// GLOBAL HEADER STYLES
 header nav {
     li{
     margin-top: 50px;
@@ -39,6 +40,8 @@ header {
     width: 100%;
 }
 
+
+// PAGE SPECIFIC HERO IMAGES
 .headerHome {
     background-image: url(.././assets/home-header.jpg);
     @include headerBackground;

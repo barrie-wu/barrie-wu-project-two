@@ -260,10 +260,24 @@ a {
   color: #ffffff;
 }
 
+.mainwrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
   width: 85%;
+}
+
+section:nth-child(odd) {
+  background-color: #2b331b;
+}
+
+section:nth-child(even), aside {
+  background-color: #171b0e;
 }
 
 html {
@@ -325,7 +339,7 @@ button, .readMoreButton {
 }
 
 article a {
-  padding: 10px 5px 5px;
+  padding: 15px 15px 10px;
   background-color: #ffd300;
 }
 
@@ -397,12 +411,13 @@ header {
   background-position-x: -150px;
 }
 
-section:nth-child(odd) {
-  background-color: #2b331b;
+.homeMain article p {
+  margin-bottom: 25px;
 }
 
-section:nth-child(even), aside {
-  background-color: #171b0e;
+.homeMain article .findMoreButton {
+  background-color: #0f0f0f;
+  padding: 15px 20px 10px;
 }
 
 .aboutUs ul {
@@ -454,6 +469,84 @@ section:nth-child(even), aside {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.features ul li article .featureText {
+  width: 42%;
+}
+
+.features ul li article .featureText a {
+  color: #171b0e;
+}
+
+.featureArticle1 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.featureArticle2 {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.featureArticle2 .featureText {
+  text-align: right;
+}
+
+.contest {
+  text-align: center;
+}
+
+.contest h2 {
+  color: #ffd300;
+}
+
+.contest p {
+  text-align: left;
+}
+
+.banner {
+  padding: 0;
+}
+
+.banner img {
+  display: block;
+  width: 100%;
+}
+
+.homeBlogPost article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.homeBlogPost article .homeBlogPostText {
+  width: 70%;
+}
+
+.homeBlogPost article .homeBlogPostText h2 {
+  color: #ffd300;
+}
+
+.gallery ul {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.gallery ul li {
+  width: 32%;
+}
+
+.gallery ul li img {
+  width: 100%;
+  height: 100%;
 }
 
 footer {
