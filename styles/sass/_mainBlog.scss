@@ -1,0 +1,92 @@
+.blogMain {
+    position: relative;
+    section {
+        position: relative;
+    }
+}
+
+.blogPost{
+    position: relative;
+    top: -250px;
+    .blogImage {
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .blogText,
+    .blogComments {
+        span {
+            display: block;
+        }
+    }
+}
+
+.blogText {
+    background-color: $pine;
+    padding: 20px 100px 100px;
+    h2 {
+        color: $yellow;
+    }
+    span {
+        margin: 25px 0;
+    }
+}
+
+.blogComments {
+    padding: 20px 100px;
+    margin-top: 50px;
+    .blogComment {
+        margin-bottom: 50px;
+        display: flex;
+        figure {
+            margin-right: 25px;
+        }
+        p {
+            span {
+                color: $yellow;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+aside {
+    width: 27%;
+    position: absolute;
+    top: 75px;
+    left: 50px;
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+        figure {
+            width: 125%;
+            padding: 0;
+            position: relative;
+            top: -20px;
+            right: 20px;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .featuredRestaurants {
+            padding: 25px;
+            h4 {
+                color: $yellow;
+            }
+            .recentPosts {
+                margin-top: 50px;
+                ul {
+                    flex-direction: column;  
+                    li {
+                        list-style: disc inside;
+                    }
+                }
+            }
+        }        
+    }
+}
+
