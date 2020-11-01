@@ -1,0 +1,23 @@
+.contact {
+    @include imageOverlay;
+    padding-bottom: 175px;
+    li {
+        margin-right: 20px;
+        i {
+         color: $yellow;
+        }
+    }
+    form {
+        padding: 40px;
+        width: 60%;
+        background-color: $almostBlack;
+        position: absolute;
+        top: -150px;
+        right: 5%;
+        &::after {
+            @include boxUnderlay;
+            top: 3%;
+            left: 2%;
+        }
+    }
+}

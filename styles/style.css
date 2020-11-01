@@ -240,6 +240,11 @@ html {
   margin: 0;
 }
 
+img {
+  display: block;
+  overflow-x: hidden;
+}
+
 figure {
   margin: 0;
 }
@@ -449,11 +454,20 @@ header {
   width: 45%;
   position: relative;
   z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .aboutUs ul li a:first-child {
   font-size: 3rem;
   color: #171b0e;
+  width: 10%;
 }
 
 .aboutUs ul li a:first-child::after {
@@ -463,10 +477,18 @@ header {
   display: inline-block;
   background-color: #ffd300;
   border-radius: 50%;
-  position: absolute;
-  top: -10px;
-  left: -6px;
+  position: relative;
+  top: -43px;
+  left: -13px;
   z-index: -1;
+}
+
+.aboutUs ul li a:nth-child(2), .aboutUs ul li p {
+  width: 85%;
+}
+
+.aboutUs ul li h2 {
+  line-height: unset;
 }
 
 .aboutUs ul li:nth-child(3), .aboutUs ul li:nth-child(4) {
@@ -493,6 +515,48 @@ header {
 
 .features ul li article .featureText a {
   color: #171b0e;
+}
+
+.featureArticle1 {
+  position: relative;
+  z-index: 1;
+}
+
+.featureArticle1 figure {
+  position: relative;
+  right: 12%;
+}
+
+.featureArticle1 figure::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: #ffd300;
+  position: absolute;
+  z-index: -1;
+  top: 4%;
+  left: 3%;
+}
+
+.featureArticle2 {
+  position: relative;
+  z-index: 1;
+}
+
+.featureArticle2 figure {
+  position: relative;
+  left: 12%;
+}
+
+.featureArticle2 figure::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: #ffd300;
+  position: absolute;
+  z-index: -1;
+  top: 4%;
+  right: 3%;
 }
 
 .featureArticle1 {
@@ -537,9 +601,27 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.homeBlogPost article figure {
+  position: relative;
+  z-index: 1;
+}
+
+.homeBlogPost article figure::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: #ffd300;
+  position: absolute;
+  z-index: -1;
+  top: 15px;
+  right: 15px;
 }
 
 .homeBlogPost article .homeBlogPostText {
@@ -679,6 +761,40 @@ aside article .featuredRestaurants .recentPosts ul li {
   list-style: disc inside;
 }
 
+.contact {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 175px;
+}
+
+.contact li {
+  margin-right: 20px;
+}
+
+.contact li i {
+  color: #ffd300;
+}
+
+.contact form {
+  padding: 40px;
+  width: 60%;
+  background-color: #171b0e;
+  position: absolute;
+  top: -150px;
+  right: 5%;
+}
+
+.contact form::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: #ffd300;
+  position: absolute;
+  z-index: -1;
+  top: 3%;
+  left: 2%;
+}
+
 form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -697,7 +813,7 @@ form input[type="text"], form input[type="email"] {
 }
 
 form textarea, form button {
-  margin-top: 25px;
+  margin-top: 40px;
   width: 100%;
 }
 

@@ -18,9 +18,13 @@
         width: 45%;
         position: relative;
         z-index: 1;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
         a:first-child {
             font-size: 3rem;
             color: $almostBlack;
+            width: 10%;
             &::after {
                 content: '';
                 height: 50px;
@@ -28,11 +32,17 @@
                 display: inline-block;
                 background-color: $yellow;
                 border-radius: 50%;
-                position: absolute;
-                top: -10px;
-                left: -6px;
+                position: relative;
+                top: -43px;
+                left: -13px;
                 z-index: -1;
             }
+        }
+        a:nth-child(2), p {
+            width: 85%;
+        }
+        h2 {
+            line-height: unset;
         }
         &:nth-child(3),
         &:nth-child(4) {
@@ -55,6 +65,32 @@
                     color: $almostBlack;
                 }
             }
+        }
+    }
+}
+
+.featureArticle1 {
+    @include imageOverlay;
+    figure {
+        position: relative;
+        right: 12%;
+        &::after {
+            @include boxUnderlay;
+            top: 4%;
+            left: 3%
+        }
+    }
+}
+
+.featureArticle2 {
+    @include imageOverlay;
+    figure {
+        position: relative;
+        left: 12%;
+        &::after{
+            @include boxUnderlay;
+            top: 4%;
+            right: 3%;
         }
     }
 }
@@ -97,7 +133,16 @@
 // HOME BLOG POST STYLES
 .homeBlogPost article {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    figure {
+        @include imageOverlay;
+        &::after {
+            @include boxUnderlay;
+            top: 15px;
+            right: 15px;
+        }
+    }
     .homeBlogPostText {
         width: 70%;
         h2 {
