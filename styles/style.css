@@ -242,7 +242,6 @@ html {
 
 img {
   display: block;
-  overflow-x: hidden;
 }
 
 figure {
@@ -642,27 +641,36 @@ header {
   width: 32%;
 }
 
-.gallery ul li img {
-  width: 100%;
-  height: 100%;
-}
-
 .blogMain {
-  position: relative;
-}
-
-.blogMain section {
   position: relative;
 }
 
 .blogPost {
   position: relative;
-  top: -250px;
+  z-index: 1;
+}
+
+.blogPost .blogImage {
+  margin-bottom: 15px;
+  position: absolute;
+  bottom: 100%;
+  left: 2%;
 }
 
 .blogPost .blogImage img {
   height: 100%;
   width: 100%;
+}
+
+.blogPost .blogImage::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: #ffd300;
+  position: absolute;
+  z-index: -1;
+  top: 4%;
+  right: 3%;
 }
 
 .blogPost .blogText span,
@@ -673,6 +681,19 @@ header {
 .blogText {
   background-color: #2b331b;
   padding: 20px 100px 100px;
+  margin-top: 40%;
+  position: relative;
+}
+
+.blogText::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: #ffd300;
+  position: absolute;
+  z-index: -1;
+  top: 1%;
+  right: 1%;
 }
 
 .blogText h2 {
@@ -685,7 +706,7 @@ header {
 
 .blogComments {
   padding: 20px 100px;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .blogComments .blogComment {

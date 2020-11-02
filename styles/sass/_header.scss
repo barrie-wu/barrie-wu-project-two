@@ -33,11 +33,7 @@ header {
     position: absolute;
     top: 28%;
     right: 0;
-}
-
-.headerImg img {
-    height: 100%;
-    width: 100%;
+    @include img100;
 }
 
 

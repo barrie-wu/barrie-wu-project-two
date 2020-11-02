@@ -1,17 +1,19 @@
 .blogMain {
     position: relative;
-    section {
-        position: relative;
-    }
 }
 
 .blogPost{
-    position: relative;
-    top: -250px;
+     @include imageOverlay;
     .blogImage {
-        img {
-            height: 100%;
-            width: 100%;
+        margin-bottom: 15px;
+        @include img100;
+        position: absolute;
+        bottom: 100%;
+        left: 2%;
+        &::after {
+            @include boxUnderlay;
+            top: 4%;
+            right: 3%;
         }
     }
     .blogText,
@@ -25,6 +27,13 @@
 .blogText {
     background-color: $pine;
     padding: 20px 100px 100px;
+    margin-top: 40%;
+    position: relative;
+    &::after {
+        @include boxUnderlay;
+        top: 1%;
+        right: 1%;
+    }
     h2 {
         color: $yellow;
     }
@@ -35,7 +44,7 @@
 
 .blogComments {
     padding: 20px 100px;
-    margin-top: 50px;
+    margin-top: 25px;
     .blogComment {
         margin-bottom: 50px;
         display: flex;
@@ -67,10 +76,7 @@ aside {
             position: relative;
             top: -20px;
             right: 20px;
-            img {
-                height: 100%;
-                width: 100%;
-            }
+            @include img100;
         }
         .featuredRestaurants {
             padding: 25px;

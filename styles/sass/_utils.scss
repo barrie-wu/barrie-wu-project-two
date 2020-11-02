@@ -20,6 +20,7 @@ $black: #0f0f0f; // rgb(15,15,15);
     padding: 15px;
 }
 
+// IMAGE UNDERLAY BOX
 @mixin imageOverlay {
     position: relative;
     z-index: 1;
@@ -32,6 +33,14 @@ $black: #0f0f0f; // rgb(15,15,15);
     background-color: $yellow;
     position: absolute;
     z-index: -1;
+}
+
+// IMG FILL
+@mixin img100 {
+    img {
+        height: 100%;
+        width: 100%;
+    }
 }
 
 // HOVER/FOCUS/ACTIVE STATES

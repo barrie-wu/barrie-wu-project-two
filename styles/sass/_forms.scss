@@ -3,8 +3,6 @@ form {
     flex-wrap: wrap;
     justify-content: space-between;
     input[type="text"], input[type="email"] {
-        // padding: 10px;
-        // border-bottom: 2px solid $yellow;
         @include formBorder(border-bottom);
         width: 49%;
     }
