@@ -83,15 +83,7 @@
 .featureArticle1 {
     flex-direction: row-reverse;
     @include imageOverlay;
-    figure {
-        position: absolute;
-        left: -110px;
-        &::after {
-            @include boxUnderlay;
-            top: 4%;
-            left: 3%
-        }
-    }
+    @include featureFigurePosition (left, -110px)
 }
 
 .featureArticle2 {
@@ -101,15 +93,7 @@
         text-align: right;
     }
     @include imageOverlay;
-    figure {
-        position: absolute;
-        right: -100px;
-        &::after{
-            @include boxUnderlay;
-            top: 4%;
-            right: 3%;
-        }
-    }
+    @include featureFigurePosition (right, -100px);
 }
 
 

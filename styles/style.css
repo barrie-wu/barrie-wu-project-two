@@ -553,7 +553,7 @@ header {
   position: absolute;
   z-index: -1;
   top: 4%;
-  left: 3%;
+  right: 3%;
 }
 
 .featureArticle2 {
@@ -684,7 +684,7 @@ header {
   background-color: #ffd300;
   position: absolute;
   z-index: -1;
-  top: 4%;
+  top: 5%;
   right: 3%;
 }
 
@@ -886,4 +886,48 @@ footer p a {
 
 footer p a:hover, footer p a:focus, footer p a:active {
   color: #ffd300;
+}
+
+@media (max-width: 1210px) {
+  .headerImg {
+    top: 40%;
+  }
+  .aboutUs ul li {
+    margin-top: 15%;
+  }
+  .features article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: unset;
+  }
+  .features article .featureText {
+    margin-top: 25px;
+    text-align: center;
+    width: 100%;
+  }
+  .features article figure {
+    position: unset;
+  }
+  .featureArticle2 {
+    margin-top: 100px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .blogMain h1 {
+    font-size: 5rem;
+    width: 37%;
+  }
+  .blogMain h2, .blogMain h4 {
+    line-height: unset;
+  }
 }

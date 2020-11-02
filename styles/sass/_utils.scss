@@ -43,6 +43,18 @@ $black: #0f0f0f; // rgb(15,15,15);
     }
 }
 
+@mixin featureFigurePosition ($position, $rightShift) {
+    figure {
+        position: absolute;
+        #{$position}: $rightShift;
+        &::after{
+            @include boxUnderlay;
+            top: 4%;
+            right: 3%;
+        }
+    }
+}
+
 // HOVER/FOCUS/ACTIVE STATES
 @mixin hoverFocus {
     &:hover, &:focus, &:active {
