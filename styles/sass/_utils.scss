@@ -49,3 +49,7 @@ $black: #0f0f0f; // rgb(15,15,15);
         @content;
     }
 }
+
+@mixin buttonTransition {
+    transition: background .2s;
+}

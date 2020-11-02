@@ -15,5 +15,9 @@ form {
     }
     button {
         background-color: $yellow;
+        @include buttonTransition;
+        @include hoverFocus {
+            background-color: $white;
+        }
     }
 }

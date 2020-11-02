@@ -438,6 +438,12 @@ header {
 .homeMain article .findMoreButton {
   background-color: #0f0f0f;
   padding: 15px 20px 10px;
+  -webkit-transition: background .2s;
+  transition: background .2s;
+}
+
+.homeMain article .findMoreButton:hover, .homeMain article .findMoreButton:focus, .homeMain article .findMoreButton:active {
+  background-color: #171b0e;
 }
 
 .aboutUs ul {
@@ -464,9 +470,12 @@ header {
 }
 
 .aboutUs ul li a:first-child {
+  margin-right: 20px;
+  text-align: center;
   font-size: 3rem;
   color: #171b0e;
   width: 10%;
+  position: relative;
 }
 
 .aboutUs ul li a:first-child::after {
@@ -476,9 +485,9 @@ header {
   display: inline-block;
   background-color: #ffd300;
   border-radius: 50%;
-  position: relative;
-  top: -43px;
-  left: -13px;
+  position: absolute;
+  top: -10px;
+  left: 1%;
   z-index: -1;
 }
 
@@ -514,16 +523,26 @@ header {
 
 .features ul li article .featureText a {
   color: #171b0e;
+  -webkit-transition: background .2s;
+  transition: background .2s;
+}
+
+.features ul li article .featureText a:hover, .features ul li article .featureText a:focus, .features ul li article .featureText a:active {
+  background-color: #ffffff;
 }
 
 .featureArticle1 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   position: relative;
   z-index: 1;
 }
 
 .featureArticle1 figure {
-  position: relative;
-  right: 12%;
+  position: absolute;
+  left: -110px;
 }
 
 .featureArticle1 figure::after {
@@ -538,13 +557,21 @@ header {
 }
 
 .featureArticle2 {
+  margin-top: 400px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   position: relative;
   z-index: 1;
 }
 
+.featureArticle2 .featureText {
+  text-align: right;
+}
+
 .featureArticle2 figure {
-  position: relative;
-  left: 12%;
+  position: absolute;
+  right: -100px;
 }
 
 .featureArticle2 figure::after {
@@ -556,23 +583,6 @@ header {
   z-index: -1;
   top: 4%;
   right: 3%;
-}
-
-.featureArticle1 {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
-.featureArticle2 {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.featureArticle2 .featureText {
-  text-align: right;
 }
 
 .contest {
@@ -639,6 +649,11 @@ header {
 
 .gallery ul li {
   width: 32%;
+}
+
+.gallery ul li img {
+  height: 100%;
+  width: 100%;
 }
 
 .blogMain {
@@ -845,6 +860,12 @@ form textarea {
 
 form button {
   background-color: #ffd300;
+  -webkit-transition: background .2s;
+  transition: background .2s;
+}
+
+form button:hover, form button:focus, form button:active {
+  background-color: #ffffff;
 }
 
 footer {
