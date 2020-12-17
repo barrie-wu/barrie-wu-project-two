@@ -10,7 +10,7 @@ $black: #0f0f0f; // rgb(15,15,15);
 // HERO IMAGE SETTINGS
 @mixin headerBackground {
     background-repeat: no-repeat;
-    background-position: cover;
+    background-size: cover;
     width: 100%;
 }
 
