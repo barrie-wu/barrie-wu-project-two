@@ -408,7 +408,7 @@ header {
 .headerHome {
   background-image: url(.././assets/home-header.jpg);
   background-repeat: no-repeat;
-  background-position: cover;
+  background-size: cover;
   width: 100%;
   height: 85vh;
 }
@@ -416,7 +416,7 @@ header {
 .headerBlog {
   background-image: url(.././assets/blog-header.jpg);
   background-repeat: no-repeat;
-  background-position: cover;
+  background-size: cover;
   width: 100%;
   height: 74vh;
   background-position-x: -100px;
@@ -425,7 +425,7 @@ header {
 .headerContact {
   background-image: url(.././assets/contact-header.jpg);
   background-repeat: no-repeat;
-  background-position: cover;
+  background-size: cover;
   width: 100%;
   height: 73vh;
   background-position-x: -150px;
