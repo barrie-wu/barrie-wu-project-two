@@ -29,6 +29,7 @@ header {
 }
 
 .headerImg {
+    max-width: 800px;
     width: 55%;
     position: absolute;
     top: 28%;
@@ -42,6 +43,7 @@ header {
     background-image: url(.././assets/home-header.jpg);
     @include headerBackground;
     height: 85vh;
+    background-position: center;
 }
 
 .headerBlog {
@@ -49,12 +51,14 @@ header {
     @include headerBackground;
     height: 74vh;
     background-position-x: -100px;
+    background-position: center;
 }
 
 .headerContact {
     background-image: url(.././assets/contact-header.jpg);
     @include headerBackground;
     height: 73vh;
-    background-position-x: -150px;
+    // background-position-x: -150px;
+    background-size: cover;
 }
 

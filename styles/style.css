@@ -274,8 +274,8 @@ button {
   border: none;
 }
 
-.mainwrapper {
-  max-width: 1600px;
+.mainWrapper {
+  max-width: 2000px;
   margin: 0 auto;
   width: 100%;
 }
@@ -394,6 +394,7 @@ header {
 }
 
 .headerImg {
+  max-width: 800px;
   width: 55%;
   position: absolute;
   top: 28%;
@@ -411,6 +412,7 @@ header {
   background-size: cover;
   width: 100%;
   height: 85vh;
+  background-position: center;
 }
 
 .headerBlog {
@@ -420,6 +422,7 @@ header {
   width: 100%;
   height: 74vh;
   background-position-x: -100px;
+  background-position: center;
 }
 
 .headerContact {
@@ -428,7 +431,7 @@ header {
   background-size: cover;
   width: 100%;
   height: 73vh;
-  background-position-x: -150px;
+  background-size: cover;
 }
 
 .homeMain article p {
