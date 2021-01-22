@@ -479,7 +479,7 @@ header {
 .headerImg {
   max-width: 700px;
   position: absolute;
-  top: 325px;
+  top: 375px;
   right: 0;
 }
 
@@ -1076,6 +1076,9 @@ footer p a:hover, footer p a:focus, footer p a:active {
   .aboutUs ul li a:first-child::after {
     left: 20%;
   }
+  .headerImg {
+    width: 450px;
+  }
 }
 
 @media (max-width: 940px) {
@@ -1171,11 +1174,14 @@ footer p a:hover, footer p a:focus, footer p a:active {
   }
 }
 
-@media (max-height: 1020px) {
+@media (max-height: 945px) {
+  .headerImg {
+    max-width: 550px;
+  }
+}
+
+@media (max-height: 750px) {
   .headerImg {
     visibility: hidden;
-  }
-  main .aboutUs {
-    padding-top: 25px;
   }
 }
