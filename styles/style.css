@@ -383,6 +383,10 @@ header nav li a:hover, header nav li a:focus, header nav li a:active {
   border-bottom: 3px solid #ffd300;
 }
 
+.active {
+  visibility: visible;
+}
+
 .hamburgerMenu {
   padding-top: 25px;
   position: absolute;
@@ -393,14 +397,6 @@ header nav li a:hover, header nav li a:focus, header nav li a:active {
   width: 50px;
   padding: 5px;
   position: relative;
-}
-
-.hamburgerMenu .hamburger:active .burgerTop {
-  top: -5px;
-}
-
-.hamburgerMenu .hamburger:active .burgerBottom {
-  bottom: -5px;
 }
 
 .hamburgerMenu .hamburger div {
@@ -427,6 +423,16 @@ header nav li a:hover, header nav li a:focus, header nav li a:active {
   bottom: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.hamburgerMenu .hamburgerLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .hamburgerMenu .hamburgerLinks li {
