@@ -16,6 +16,10 @@ header nav {
     }
 }
 
+.active {
+    visibility: visible;
+}
+
 .hamburgerMenu {
     padding-top: 25px;
     position: absolute;
@@ -24,14 +28,6 @@ header nav {
         width: 50px;
         padding: 5px;
         position: relative;
-        &:active {
-            .burgerTop {
-                top: -5px;
-            }
-            .burgerBottom {
-                bottom: -5px;
-            }
-        }
         div {
             background-color: $white;
             height: 20%;
@@ -54,6 +50,8 @@ header nav {
         }
     }
     .hamburgerLinks {
+        display: flex;
+        flex-direction: column;
         li {
             margin-top: 0;
             background-color: $pine;
