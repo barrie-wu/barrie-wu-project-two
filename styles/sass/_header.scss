@@ -19,12 +19,6 @@ header nav {
 .hamburgerMenu {
     padding-top: 25px;
     position: absolute;
-    visibility: hidden;
-    &:active {
-        .hamburgerLinks {
-            visibility: visible;
-        }
-    }
     .hamburger {
         height: 50px;
         width: 50px;
@@ -60,9 +54,6 @@ header nav {
         }
     }
     .hamburgerLinks {
-        display: flex;
-        flex-direction: column;
-        visibility: hidden;
         li {
             margin-top: 0;
             background-color: $pine;
