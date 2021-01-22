@@ -363,6 +363,10 @@ article a {
   background-color: #ffd300;
 }
 
+header nav {
+  position: absolute;
+}
+
 header nav li {
   margin-top: 50px;
   padding: 10px 20px;
@@ -379,8 +383,87 @@ header nav li a:hover, header nav li a:focus, header nav li a:active {
   border-bottom: 3px solid #ffd300;
 }
 
+.hamburgerMenu {
+  padding-top: 25px;
+  position: absolute;
+  visibility: hidden;
+}
+
+.hamburgerMenu:hover .hamburgerLinks, .hamburgerMenu:focus .hamburgerLinks, .hamburgerMenu:active .hamburgerLinks {
+  visibility: visible;
+}
+
+.hamburgerMenu .hamburger {
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+  position: relative;
+}
+
+.hamburgerMenu .hamburger:hover .burgerTop, .hamburgerMenu .hamburger:focus .burgerTop, .hamburgerMenu .hamburger:active .burgerTop {
+  top: -5px;
+}
+
+.hamburgerMenu .hamburger:hover .burgerBottom, .hamburgerMenu .hamburger:focus .burgerBottom, .hamburgerMenu .hamburger:active .burgerBottom {
+  bottom: -5px;
+}
+
+.hamburgerMenu .hamburger div {
+  background-color: #ffffff;
+  height: 20%;
+}
+
+.hamburgerMenu .hamburger .burgerTop {
+  border-radius: 50% 50% 0 0;
+  position: relative;
+  top: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.hamburgerMenu .hamburger .burgerMiddle {
+  border-radius: 20%;
+  margin: 5px 0;
+}
+
+.hamburgerMenu .hamburger .burgerBottom {
+  border-radius: 0 0 20% 20%;
+  position: relative;
+  bottom: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.hamburgerMenu .hamburgerLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  visibility: hidden;
+}
+
+.hamburgerMenu .hamburgerLinks li {
+  margin-top: 0;
+  background-color: #2b331b;
+  width: 150px;
+}
+
+.hamburgerMenu .hamburgerLinks li:hover, .hamburgerMenu .hamburgerLinks li:focus, .hamburgerMenu .hamburgerLinks li:active {
+  background-color: #ffd300;
+}
+
+.hamburgerMenu .hamburgerLinks li:hover a, .hamburgerMenu .hamburgerLinks li:focus a, .hamburgerMenu .hamburgerLinks li:active a {
+  color: #171b0e;
+  border: unset;
+}
+
 h1 {
   width: 43%;
+  margin: 0;
+  padding-top: 200px;
 }
 
 h1 span {
@@ -911,6 +994,12 @@ footer p a:hover, footer p a:focus, footer p a:active {
 }
 
 @media (max-width: 1210px) {
+  .defaultMenu {
+    visibility: hidden;
+  }
+  .hamburgerMenu {
+    visibility: visible;
+  }
   .aboutUs ul li {
     margin-top: 10%;
   }
@@ -991,7 +1080,7 @@ footer p a:hover, footer p a:focus, footer p a:active {
 
 @media (max-width: 940px) {
   .headerImg {
-    max-width: 600px;
+    top: 375px;
   }
 }
 
@@ -1082,7 +1171,7 @@ footer p a:hover, footer p a:focus, footer p a:active {
   }
 }
 
-@media (max-height: 850px) {
+@media (max-height: 1020px) {
   .headerImg {
     visibility: hidden;
   }
