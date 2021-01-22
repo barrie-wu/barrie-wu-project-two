@@ -389,7 +389,7 @@ header nav li a:hover, header nav li a:focus, header nav li a:active {
   visibility: hidden;
 }
 
-.hamburgerMenu:hover .hamburgerLinks, .hamburgerMenu:focus .hamburgerLinks, .hamburgerMenu:active .hamburgerLinks {
+.hamburgerMenu:active .hamburgerLinks {
   visibility: visible;
 }
 
@@ -400,11 +400,11 @@ header nav li a:hover, header nav li a:focus, header nav li a:active {
   position: relative;
 }
 
-.hamburgerMenu .hamburger:hover .burgerTop, .hamburgerMenu .hamburger:focus .burgerTop, .hamburgerMenu .hamburger:active .burgerTop {
+.hamburgerMenu .hamburger:active .burgerTop {
   top: -5px;
 }
 
-.hamburgerMenu .hamburger:hover .burgerBottom, .hamburgerMenu .hamburger:focus .burgerBottom, .hamburgerMenu .hamburger:active .burgerBottom {
+.hamburgerMenu .hamburger:active .burgerBottom {
   bottom: -5px;
 }
 

@@ -20,7 +20,7 @@ header nav {
     padding-top: 25px;
     position: absolute;
     visibility: hidden;
-    @include hoverFocus {
+    &:active {
         .hamburgerLinks {
             visibility: visible;
         }
@@ -30,7 +30,7 @@ header nav {
         width: 50px;
         padding: 5px;
         position: relative;
-        @include hoverFocus {
+        &:active {
             .burgerTop {
                 top: -5px;
             }
