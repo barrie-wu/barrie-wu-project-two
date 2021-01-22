@@ -435,7 +435,6 @@ header nav li a:hover, header nav li a:focus, header nav li a:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  visibility: hidden;
 }
 
 .hamburgerMenu .hamburgerLinks li {
@@ -451,6 +450,10 @@ header nav li a:hover, header nav li a:focus, header nav li a:active {
 .hamburgerMenu .hamburgerLinks li:hover a, .hamburgerMenu .hamburgerLinks li:focus a, .hamburgerMenu .hamburgerLinks li:active a {
   color: #171b0e;
   border: unset;
+}
+
+.active {
+  visibility: visible;
 }
 
 h1 {
@@ -1147,6 +1150,9 @@ footer p a:hover, footer p a:focus, footer p a:active {
   .wrapper {
     width: 90%;
   }
+  h1 {
+    font-size: 4.3rem;
+  }
   .blogText, .blogComments {
     padding: 0 25px;
   }
@@ -1170,6 +1176,12 @@ footer p a:hover, footer p a:focus, footer p a:active {
 @media (max-height: 945px) {
   .headerImg {
     max-width: 550px;
+  }
+}
+
+@media (max-height: 900px) {
+  h1 {
+    padding-top: 100px;
   }
 }
 
