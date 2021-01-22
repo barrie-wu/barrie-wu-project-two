@@ -18,38 +18,43 @@
     flex-wrap: wrap;
     justify-content: space-between;
     li {
-        margin-top: 12%;
+        margin-top: 5%;
         width: 45%;
         position: relative;
         z-index: 1;
         display: flex;
         justify-content: flex-end;
         flex-wrap: wrap;
+        a h2 {
+            transition: 0.3s;
+            @include hoverFocus {
+                color: $yellow;
+            }
+        }
         a:first-child {
+            background-color: $yellow;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
             margin-right: 20px;
-            text-align: center;
-            font-size: 3rem;
-            color: $almostBlack;
-            width: 10%;
-            position: relative;
-            &::after {
-                content: '';
-                height: 50px;
-                width: 50px;
-                display: inline-block;
-                background-color: $yellow;
-                border-radius: 50%;
-                position: absolute;
-                top: -10px;
-                left: 1%;
-                z-index: -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.3s;
+            @include hoverFocus {
+                background-color: $white;
+            }
+            i {
+                color: $almostBlack;
+                padding: 10px;
+                font-size: 2.7rem;
             }
         }
         a:nth-child(2), p {
             width: 85%;
-        }
-        h2 {
-            line-height: unset;
         }
         &:nth-child(3),
         &:nth-child(4) {
@@ -104,7 +109,8 @@
         color: $yellow;
     }
     p {
-        text-align: left;
+        text-align: center;
+        margin: 15px auto 30px;
     }
 }
 
@@ -136,6 +142,9 @@
         width: 70%;
         h2 {
             color: $yellow;
+        }
+        p {
+            margin: 15px auto 30px;
         }
     }
 }

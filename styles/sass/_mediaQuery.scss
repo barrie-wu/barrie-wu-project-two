@@ -1,11 +1,15 @@
 @media (max-width: 1210px) {
     // HOMEPAGE QUERIES
-    .headerImg {
-        top: 50%;
+    .defaultMenu {
+        visibility: hidden;
+    }
+
+    .hamburgerMenu {
+        visibility: visible;
     }
 
     .aboutUs ul li {
-        margin-top: 20%;
+        margin-top: 10%;
     }
 
     .features {
@@ -86,27 +90,21 @@
             }
         }
     }
+    
+    .headerImg {
+        width: 450px;
+    }
+}
+
+@media (max-width: 940px) {
+    .headerImg {
+        top: 375px;
+    }
 }
 
 @media (max-width: 800px) {
-    .headerHome {
-        background-position-x: -300px;
-    }
-
-    .headerBlog {
-        background-position-x: -300px;
-    }
-
-    .headerContact {
-        background-position-x: -900px;
-    }
-
     header nav a {
         font-size: 1.5rem;
-    }
-
-    h1 {
-        font-size: 5rem;
     }
 
     section {
@@ -220,5 +218,17 @@
 @media (max-width: 445px) {
     .aboutUs li a:first-child {
         display: none;
+    }
+}
+
+@media (max-height: 945px) {
+    .headerImg {
+        max-width: 550px;
+    }
+}
+
+@media (max-height: 750px) {
+    .headerImg {
+        visibility: hidden;
     }
 }

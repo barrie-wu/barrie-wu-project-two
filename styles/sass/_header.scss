@@ -1,5 +1,6 @@
 // GLOBAL HEADER STYLES
 header nav {
+    position: absolute;
     li{
     margin-top: 50px;
     padding: 10px 20px;
@@ -15,8 +16,72 @@ header nav {
     }
 }
 
+.hamburgerMenu {
+    padding-top: 25px;
+    position: absolute;
+    visibility: hidden;
+    @include hoverFocus {
+        .hamburgerLinks {
+            visibility: visible;
+        }
+    }
+    .hamburger {
+        height: 50px;
+        width: 50px;
+        padding: 5px;
+        position: relative;
+        @include hoverFocus {
+            .burgerTop {
+                top: -5px;
+            }
+            .burgerBottom {
+                bottom: -5px;
+            }
+        }
+        div {
+            background-color: $white;
+            height: 20%;
+        }
+        .burgerTop {
+            border-radius: 50% 50% 0 0;
+            position: relative;
+            top: 0;
+            transition: all 0.3s;
+        }
+        .burgerMiddle {
+            border-radius: 20%;
+            margin: 5px 0;
+        }
+        .burgerBottom {
+            border-radius: 0 0 20% 20%;
+            position: relative;
+            bottom: 0;
+            transition: all 0.3s;
+        }
+    }
+    .hamburgerLinks {
+        display: flex;
+        flex-direction: column;
+        visibility: hidden;
+        li {
+            margin-top: 0;
+            background-color: $pine;
+            width: 150px;
+            @include hoverFocus {
+                background-color: $yellow;
+                a {
+                    color: $almostBlack;
+                    border: unset;
+                }
+            }
+        }
+    }
+}
+
 h1 {
     width: 43%;
+    margin: 0;
+    padding-top: 200px;
     span {
         color: $almostBlack;
         background: $white;
@@ -29,9 +94,9 @@ header {
 }
 
 .headerImg {
-    width: 55%;
+    max-width: 700px;
     position: absolute;
-    top: 28%;
+    top: 375px;
     right: 0;
     @include img100;
 }
@@ -42,6 +107,7 @@ header {
     background-image: url(.././assets/home-header.jpg);
     @include headerBackground;
     height: 85vh;
+    background-position: center;
 }
 
 .headerBlog {
@@ -49,12 +115,14 @@ header {
     @include headerBackground;
     height: 74vh;
     background-position-x: -100px;
+    background-position: center;
 }
 
 .headerContact {
     background-image: url(.././assets/contact-header.jpg);
     @include headerBackground;
     height: 73vh;
-    background-position-x: -150px;
+    // background-position-x: -150px;
+    background-size: cover;
 }
 

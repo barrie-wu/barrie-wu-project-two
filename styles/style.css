@@ -274,8 +274,8 @@ button {
   border: none;
 }
 
-.mainwrapper {
-  max-width: 1600px;
+.mainWrapper {
+  max-width: 2000px;
   margin: 0 auto;
   width: 100%;
 }
@@ -326,7 +326,7 @@ h1 {
 
 h2 {
   font-size: 4.5rem;
-  line-height: 99.8px;
+  line-height: 1;
 }
 
 h3 {
@@ -363,6 +363,10 @@ article a {
   background-color: #ffd300;
 }
 
+header nav {
+  position: absolute;
+}
+
 header nav li {
   margin-top: 50px;
   padding: 10px 20px;
@@ -379,8 +383,87 @@ header nav li a:hover, header nav li a:focus, header nav li a:active {
   border-bottom: 3px solid #ffd300;
 }
 
+.hamburgerMenu {
+  padding-top: 25px;
+  position: absolute;
+  visibility: hidden;
+}
+
+.hamburgerMenu:hover .hamburgerLinks, .hamburgerMenu:focus .hamburgerLinks, .hamburgerMenu:active .hamburgerLinks {
+  visibility: visible;
+}
+
+.hamburgerMenu .hamburger {
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+  position: relative;
+}
+
+.hamburgerMenu .hamburger:hover .burgerTop, .hamburgerMenu .hamburger:focus .burgerTop, .hamburgerMenu .hamburger:active .burgerTop {
+  top: -5px;
+}
+
+.hamburgerMenu .hamburger:hover .burgerBottom, .hamburgerMenu .hamburger:focus .burgerBottom, .hamburgerMenu .hamburger:active .burgerBottom {
+  bottom: -5px;
+}
+
+.hamburgerMenu .hamburger div {
+  background-color: #ffffff;
+  height: 20%;
+}
+
+.hamburgerMenu .hamburger .burgerTop {
+  border-radius: 50% 50% 0 0;
+  position: relative;
+  top: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.hamburgerMenu .hamburger .burgerMiddle {
+  border-radius: 20%;
+  margin: 5px 0;
+}
+
+.hamburgerMenu .hamburger .burgerBottom {
+  border-radius: 0 0 20% 20%;
+  position: relative;
+  bottom: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.hamburgerMenu .hamburgerLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  visibility: hidden;
+}
+
+.hamburgerMenu .hamburgerLinks li {
+  margin-top: 0;
+  background-color: #2b331b;
+  width: 150px;
+}
+
+.hamburgerMenu .hamburgerLinks li:hover, .hamburgerMenu .hamburgerLinks li:focus, .hamburgerMenu .hamburgerLinks li:active {
+  background-color: #ffd300;
+}
+
+.hamburgerMenu .hamburgerLinks li:hover a, .hamburgerMenu .hamburgerLinks li:focus a, .hamburgerMenu .hamburgerLinks li:active a {
+  color: #171b0e;
+  border: unset;
+}
+
 h1 {
   width: 43%;
+  margin: 0;
+  padding-top: 200px;
 }
 
 h1 span {
@@ -394,9 +477,9 @@ header {
 }
 
 .headerImg {
-  width: 55%;
+  max-width: 700px;
   position: absolute;
-  top: 28%;
+  top: 375px;
   right: 0;
 }
 
@@ -411,6 +494,7 @@ header {
   background-size: cover;
   width: 100%;
   height: 85vh;
+  background-position: center;
 }
 
 .headerBlog {
@@ -420,6 +504,7 @@ header {
   width: 100%;
   height: 74vh;
   background-position-x: -100px;
+  background-position: center;
 }
 
 .headerContact {
@@ -428,7 +513,7 @@ header {
   background-size: cover;
   width: 100%;
   height: 73vh;
-  background-position-x: -150px;
+  background-size: cover;
 }
 
 .homeMain article p {
@@ -455,7 +540,7 @@ header {
 }
 
 .aboutUs ul li {
-  margin-top: 12%;
+  margin-top: 5%;
   width: 45%;
   position: relative;
   z-index: 1;
@@ -469,34 +554,49 @@ header {
       flex-wrap: wrap;
 }
 
-.aboutUs ul li a:first-child {
-  margin-right: 20px;
-  text-align: center;
-  font-size: 3rem;
-  color: #171b0e;
-  width: 10%;
-  position: relative;
+.aboutUs ul li a h2 {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.aboutUs ul li a:first-child::after {
-  content: '';
-  height: 50px;
-  width: 50px;
-  display: inline-block;
+.aboutUs ul li a h2:hover, .aboutUs ul li a h2:focus, .aboutUs ul li a h2:active {
+  color: #ffd300;
+}
+
+.aboutUs ul li a:first-child {
   background-color: #ffd300;
   border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
-  top: -10px;
-  left: 1%;
-  z-index: -1;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.aboutUs ul li a:first-child:hover, .aboutUs ul li a:first-child:focus, .aboutUs ul li a:first-child:active {
+  background-color: #ffffff;
+}
+
+.aboutUs ul li a:first-child i {
+  color: #171b0e;
+  padding: 10px;
+  font-size: 2.7rem;
 }
 
 .aboutUs ul li a:nth-child(2), .aboutUs ul li p {
   width: 85%;
-}
-
-.aboutUs ul li h2 {
-  line-height: unset;
 }
 
 .aboutUs ul li:nth-child(3), .aboutUs ul li:nth-child(4) {
@@ -594,7 +694,8 @@ header {
 }
 
 .contest p {
-  text-align: left;
+  text-align: center;
+  margin: 15px auto 30px;
 }
 
 .banner {
@@ -639,6 +740,10 @@ header {
 
 .homeBlogPost article .homeBlogPostText h2 {
   color: #ffd300;
+}
+
+.homeBlogPost article .homeBlogPostText p {
+  margin: 15px auto 30px;
 }
 
 .gallery ul {
@@ -889,11 +994,14 @@ footer p a:hover, footer p a:focus, footer p a:active {
 }
 
 @media (max-width: 1210px) {
-  .headerImg {
-    top: 50%;
+  .defaultMenu {
+    visibility: hidden;
+  }
+  .hamburgerMenu {
+    visibility: visible;
   }
   .aboutUs ul li {
-    margin-top: 20%;
+    margin-top: 10%;
   }
   .features ul article {
     -webkit-box-orient: vertical;
@@ -968,23 +1076,20 @@ footer p a:hover, footer p a:focus, footer p a:active {
   .aboutUs ul li a:first-child::after {
     left: 20%;
   }
+  .headerImg {
+    width: 450px;
+  }
+}
+
+@media (max-width: 940px) {
+  .headerImg {
+    top: 375px;
+  }
 }
 
 @media (max-width: 800px) {
-  .headerHome {
-    background-position-x: -300px;
-  }
-  .headerBlog {
-    background-position-x: -300px;
-  }
-  .headerContact {
-    background-position-x: -900px;
-  }
   header nav a {
     font-size: 1.5rem;
-  }
-  h1 {
-    font-size: 5rem;
   }
   section {
     padding: 50px 0;
@@ -1066,5 +1171,17 @@ footer p a:hover, footer p a:focus, footer p a:active {
 @media (max-width: 445px) {
   .aboutUs li a:first-child {
     display: none;
+  }
+}
+
+@media (max-height: 945px) {
+  .headerImg {
+    max-width: 550px;
+  }
+}
+
+@media (max-height: 750px) {
+  .headerImg {
+    visibility: hidden;
   }
 }
