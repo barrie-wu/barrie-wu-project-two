@@ -73,23 +73,5 @@
         <p>Created at <a href="https://junocollege.com/" target="_blank" rel="noreferrer noopener">Juno College</a></p>
         <p>Copyright © 2020 Juno College</p>
     </footer>
-    <script>
-
-        const burgerMenu = document.querySelector('.hamburger');
-        const burgerLinks = document.querySelector('.hamburgerLinks')
-
-        function burgerMenuClick() {
-            document.querySelector('.burgerTop').classList.toggle('bunUp');
-            document.querySelector('.burgerBottom').classList.toggle('bunDown');
-            if (burgerLinks.style.visibility === 'hidden') {
-                burgerLinks.style.visibility = "visible";
-            } else {
-                burgerLinks.style.visibility = "hidden";
-            }
-        }
-
-        burgerMenu.addEventListener('click', burgerMenuClick)
-
-    </script>
-</body>
+    <script src="script.js"></script>
 </html>
