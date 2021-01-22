@@ -18,14 +18,14 @@
                     <div class="burgerMiddle"></div>
                     <div class="burgerBottom"></div>
                 </div>
-                <ul class="hamburgerLinks">
+                <ul class="hamburgerLinks" style="visibility: hidden;">
                     <li><a href="./index.html">home</a></li>
                     <li><a href="./index.html#about">about</a></li>
                     <li><a href="./blog.html">blog</a></li>
                     <li><a href="./contact.html">contact</a></li>
                 </ul>
             </nav>
-            <nav>
+            <nav class="defaultMenu">
                 <ul>
                     <li><a href="./index.html">home</a></li>
                     <li><a href="./index.html#about">about</a></li>
@@ -73,5 +73,23 @@
         <p>Created at <a href="https://junocollege.com/" target="_blank" rel="noreferrer noopener">Juno College</a></p>
         <p>Copyright © 2020 Juno College</p>
     </footer>
+    <script>
+
+        const burgerMenu = document.querySelector('.hamburger');
+        const burgerLinks = document.querySelector('.hamburgerLinks')
+
+        function burgerMenuClick() {
+            document.querySelector('.burgerTop').classList.toggle('bunUp');
+            document.querySelector('.burgerBottom').classList.toggle('bunDown');
+            if (burgerLinks.style.visibility === 'hidden') {
+                burgerLinks.style.visibility = "visible";
+            } else {
+                burgerLinks.style.visibility = "hidden";
+            }
+        }
+
+        burgerMenu.addEventListener('click', burgerMenuClick)
+
+    </script>
 </body>
 </html>

@@ -16,8 +16,12 @@ header nav {
     }
 }
 
-.active {
-    visibility: visible;
+.bunUp {
+    top: -5px;
+}
+
+.bunDown {
+    bottom: -5px;
 }
 
 .hamburgerMenu {
@@ -35,7 +39,6 @@ header nav {
         .burgerTop {
             border-radius: 50% 50% 0 0;
             position: relative;
-            top: 0;
             transition: all 0.3s;
         }
         .burgerMiddle {
@@ -45,7 +48,6 @@ header nav {
         .burgerBottom {
             border-radius: 0 0 20% 20%;
             position: relative;
-            bottom: 0;
             transition: all 0.3s;
         }
     }
@@ -65,6 +67,10 @@ header nav {
             }
         }
     }
+}
+
+.active {
+  visibility: visible;
 }
 
 h1 {
