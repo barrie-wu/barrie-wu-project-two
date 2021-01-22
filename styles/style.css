@@ -386,11 +386,6 @@ header nav li a:hover, header nav li a:focus, header nav li a:active {
 .hamburgerMenu {
   padding-top: 25px;
   position: absolute;
-  visibility: hidden;
-}
-
-.hamburgerMenu:active .hamburgerLinks {
-  visibility: visible;
 }
 
 .hamburgerMenu .hamburger {
@@ -432,17 +427,6 @@ header nav li a:hover, header nav li a:focus, header nav li a:active {
   bottom: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-}
-
-.hamburgerMenu .hamburgerLinks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  visibility: hidden;
 }
 
 .hamburgerMenu .hamburgerLinks li {
@@ -994,12 +978,6 @@ footer p a:hover, footer p a:focus, footer p a:active {
 }
 
 @media (max-width: 1210px) {
-  .defaultMenu {
-    visibility: hidden;
-  }
-  .hamburgerMenu {
-    visibility: visible;
-  }
   .aboutUs ul li {
     margin-top: 10%;
   }
