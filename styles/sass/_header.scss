@@ -29,10 +29,9 @@ header {
 }
 
 .headerImg {
-    max-width: 800px;
-    width: 55%;
+    max-width: 700px;
     position: absolute;
-    top: 28%;
+    top: 325px;
     right: 0;
     @include img100;
 }

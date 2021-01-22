@@ -326,7 +326,7 @@ h1 {
 
 h2 {
   font-size: 4.5rem;
-  line-height: 99.8px;
+  line-height: 1;
 }
 
 h3 {
@@ -394,10 +394,9 @@ header {
 }
 
 .headerImg {
-  max-width: 800px;
-  width: 55%;
+  max-width: 700px;
   position: absolute;
-  top: 28%;
+  top: 325px;
   right: 0;
 }
 
@@ -458,7 +457,7 @@ header {
 }
 
 .aboutUs ul li {
-  margin-top: 12%;
+  margin-top: 5%;
   width: 45%;
   position: relative;
   z-index: 1;
@@ -472,34 +471,49 @@ header {
       flex-wrap: wrap;
 }
 
-.aboutUs ul li a:first-child {
-  margin-right: 20px;
-  text-align: center;
-  font-size: 3rem;
-  color: #171b0e;
-  width: 10%;
-  position: relative;
+.aboutUs ul li a h2 {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.aboutUs ul li a:first-child::after {
-  content: '';
-  height: 50px;
-  width: 50px;
-  display: inline-block;
+.aboutUs ul li a h2:hover, .aboutUs ul li a h2:focus, .aboutUs ul li a h2:active {
+  color: #ffd300;
+}
+
+.aboutUs ul li a:first-child {
   background-color: #ffd300;
   border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
-  top: -10px;
-  left: 1%;
-  z-index: -1;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.aboutUs ul li a:first-child:hover, .aboutUs ul li a:first-child:focus, .aboutUs ul li a:first-child:active {
+  background-color: #ffffff;
+}
+
+.aboutUs ul li a:first-child i {
+  color: #171b0e;
+  padding: 10px;
+  font-size: 2.7rem;
 }
 
 .aboutUs ul li a:nth-child(2), .aboutUs ul li p {
   width: 85%;
-}
-
-.aboutUs ul li h2 {
-  line-height: unset;
 }
 
 .aboutUs ul li:nth-child(3), .aboutUs ul li:nth-child(4) {
@@ -597,7 +611,8 @@ header {
 }
 
 .contest p {
-  text-align: left;
+  text-align: center;
+  margin: 15px auto 30px;
 }
 
 .banner {
@@ -642,6 +657,10 @@ header {
 
 .homeBlogPost article .homeBlogPostText h2 {
   color: #ffd300;
+}
+
+.homeBlogPost article .homeBlogPostText p {
+  margin: 15px auto 30px;
 }
 
 .gallery ul {
@@ -892,11 +911,8 @@ footer p a:hover, footer p a:focus, footer p a:active {
 }
 
 @media (max-width: 1210px) {
-  .headerImg {
-    top: 50%;
-  }
   .aboutUs ul li {
-    margin-top: 20%;
+    margin-top: 10%;
   }
   .features ul article {
     -webkit-box-orient: vertical;
@@ -973,21 +989,15 @@ footer p a:hover, footer p a:focus, footer p a:active {
   }
 }
 
+@media (max-width: 940px) {
+  .headerImg {
+    max-width: 600px;
+  }
+}
+
 @media (max-width: 800px) {
-  .headerHome {
-    background-position-x: -300px;
-  }
-  .headerBlog {
-    background-position-x: -300px;
-  }
-  .headerContact {
-    background-position-x: -900px;
-  }
   header nav a {
     font-size: 1.5rem;
-  }
-  h1 {
-    font-size: 5rem;
   }
   section {
     padding: 50px 0;
@@ -1069,5 +1079,14 @@ footer p a:hover, footer p a:focus, footer p a:active {
 @media (max-width: 445px) {
   .aboutUs li a:first-child {
     display: none;
+  }
+}
+
+@media (max-height: 850px) {
+  .headerImg {
+    visibility: hidden;
+  }
+  main .aboutUs {
+    padding-top: 25px;
   }
 }
